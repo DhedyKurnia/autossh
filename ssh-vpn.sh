@@ -17,11 +17,11 @@ state=NCR
 locality=QuezonCity
 organization=Polaris
 organizationalunit=VPN
-commonname=Gl33ch3r
+commonname=DhedyKurnia
 email=jconadera@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -88,9 +88,9 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
@@ -125,7 +125,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -175,7 +175,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -208,7 +208,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to jconadera@gmail.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/bannerssh"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/bannerssh"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
@@ -232,36 +232,36 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/trial.sh"
-wget -O deleteuser "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/deleteuser.sh"
-wget -O member "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/delete.sh"
-wget -O check "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/check.sh"
-wget -O restart "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/autokill.sh"
-wget -O checkuser "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/checklimits.sh"
-wget -O kickuser "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/kickuser.sh"
-wget -O clear-log "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/xp.sh"
-wget -O kernel-updt "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/kernel-update.sh"
+wget -O add-host "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/trial.sh"
+wget -O deleteuser "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/deleteuser.sh"
+wget -O member "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/member.sh"
+wget -O delete "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/delete.sh"
+wget -O check "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/check.sh"
+wget -O restart "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/autokill.sh"
+wget -O checkuser "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/checklimits.sh"
+wget -O kickuser "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/kickuser.sh"
+wget -O clear-log "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/xp.sh"
+wget -O kernel-updt "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/kernel-update.sh"
 chmod +x add-host
 chmod +x menu
 chmod +x usernew
