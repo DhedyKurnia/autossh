@@ -51,9 +51,9 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Gl33ch3r/autoscript/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/vps.conf"
 /etc/init.d/nginx restart
 
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
