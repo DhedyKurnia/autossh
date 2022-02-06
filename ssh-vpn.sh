@@ -12,13 +12,13 @@ source /etc/os-release
 ver=$VERSION_ID
 
 #detail nama perusahaan
-country=PH
-state=NCR
-locality=QuezonCity
-organization=Polaris
+country=ID
+state=Jawa Tengah
+locality=Blora
+organization=Daftarilmu.com
 organizationalunit=VPN
 commonname=DhedyKurnia
-email=jconadera@gmail.com
+email=dhedykurniaa@gmail.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/password"
