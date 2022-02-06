@@ -33,15 +33,15 @@ wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/cloudflare.sh
 wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/sstp.sh && chmod +x sstp.sh && ./sstp.sh
 #install ssr
-#wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/ssr.sh && chmod +x ssr.sh && ./ssr.sh
-#wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh
+wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/ssr.sh && chmod +x ssr.sh && ./ssr.sh
+wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/sodosok.sh && chmod +x sodosok.sh && ./sodosok.sh
 #installwg
-#wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/wireguard.sh && chmod +x wireguard.sh && ./wireguard.sh
+wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/wireguard.sh && chmod +x wireguard.sh && ./wireguard.sh
 #install v2ray
-#wget http://raw.githubusercontent.com/DhedyKurnia/autoscript/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh
+wget http://raw.githubusercontent.com/DhedyKurnia/autoscript/main/ins-vt.sh && chmod +x ins-vt.sh && ./ins-vt.sh
 #install L2TP
-#wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh
-#wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh
+wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #install WebsocketSSH
 wget https://raw.githubusercontent.com/DhedyKurnia/autoscript/main/inswssh.sh && chmod +x inswssh.sh && ./inswssh.sh
 # set time GMT +8
